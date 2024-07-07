@@ -18,10 +18,11 @@ struct WorkoutsView: View {
                         Text(workout.name)
                             .font(.headline)
                         Text("\(formatDuration(workout.duration)) - \(workout.caloriesBurned) kcal")
-                    }
+                    }//VStack
                     Spacer()
                     Image(systemName: "checkmark.seal.fill")
-                }
+                }//HStack
+                
             }
             .navigationTitle("Workouts")
             .onAppear {
