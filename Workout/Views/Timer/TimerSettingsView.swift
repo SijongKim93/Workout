@@ -31,7 +31,7 @@ struct TimerSettingsView: View {
                 .clipped()
                 
                 Picker("Seconds", selection: $seconds) {
-                    ForEach(0..<60) {
+                    ForEach(Array(stride(from: 0, through: 50, by: 10)), id: \.self) {
                         Text("\($0) 초")
                     }
                 }
