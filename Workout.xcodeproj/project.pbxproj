@@ -12,6 +12,7 @@
 		4D59F99F2C3AA58500CA853D /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D59F99E2C3AA58500CA853D /* MyPageView.swift */; };
 		4D59F9A12C3AA9C200CA853D /* TimerSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D59F9A02C3AA9C200CA853D /* TimerSettings.swift */; };
 		4D59F9A32C3AAF5B00CA853D /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D59F9A22C3AAF5B00CA853D /* TimerViewModel.swift */; };
+		4D59F9A52C3ACF5200CA853D /* TimerSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D59F9A42C3ACF5200CA853D /* TimerSettingsView.swift */; };
 		4D78C21C2C36E000009AAF5E /* WorkoutApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78C21B2C36E000009AAF5E /* WorkoutApp.swift */; };
 		4D78C21E2C36E000009AAF5E /* WorkoutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78C21D2C36E000009AAF5E /* WorkoutsView.swift */; };
 		4D78C2202C36E001009AAF5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D78C21F2C36E001009AAF5E /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 		4D59F99E2C3AA58500CA853D /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
 		4D59F9A02C3AA9C200CA853D /* TimerSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerSettings.swift; sourceTree = "<group>"; };
 		4D59F9A22C3AAF5B00CA853D /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
+		4D59F9A42C3ACF5200CA853D /* TimerSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerSettingsView.swift; sourceTree = "<group>"; };
 		4D78C2182C36E000009AAF5E /* Workout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Workout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D78C21B2C36E000009AAF5E /* WorkoutApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutApp.swift; sourceTree = "<group>"; };
 		4D78C21D2C36E000009AAF5E /* WorkoutsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsView.swift; sourceTree = "<group>"; };
@@ -58,6 +60,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D59F9A62C3AD14400CA853D /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				4D59F99C2C3AA57B00CA853D /* TimerView.swift */,
+				4D59F9A42C3ACF5200CA853D /* TimerSettingsView.swift */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
+		4D59F9A72C3AD1AF00CA853D /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				4D59F99A2C3AA54700CA853D /* MainView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		4D59F9A82C3AD1B700CA853D /* Record */ = {
+			isa = PBXGroup;
+			children = (
+				4D78C21D2C36E000009AAF5E /* WorkoutsView.swift */,
+			);
+			path = Record;
+			sourceTree = "<group>";
+		};
+		4D59F9A92C3AD1E800CA853D /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				4D59F99E2C3AA58500CA853D /* MyPageView.swift */,
+			);
+			path = MyPage;
+			sourceTree = "<group>";
+		};
 		4D78C20F2C36E000009AAF5E = {
 			isa = PBXGroup;
 			children = (
@@ -106,11 +141,11 @@
 		4D78C23B2C36E228009AAF5E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4D59F99A2C3AA54700CA853D /* MainView.swift */,
-				4D78C21D2C36E000009AAF5E /* WorkoutsView.swift */,
-				4D59F99C2C3AA57B00CA853D /* TimerView.swift */,
-				4D59F99E2C3AA58500CA853D /* MyPageView.swift */,
 				4D78C21B2C36E000009AAF5E /* WorkoutApp.swift */,
+				4D59F9A72C3AD1AF00CA853D /* Main */,
+				4D59F9A62C3AD14400CA853D /* Timer */,
+				4D59F9A82C3AD1B700CA853D /* Record */,
+				4D59F9A92C3AD1E800CA853D /* MyPage */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -212,6 +247,7 @@
 				4D78C22C2C36E121009AAF5E /* WorkoutViewModel.swift in Sources */,
 				4D78C21E2C36E000009AAF5E /* WorkoutsView.swift in Sources */,
 				4D78C21C2C36E000009AAF5E /* WorkoutApp.swift in Sources */,
+				4D59F9A52C3ACF5200CA853D /* TimerSettingsView.swift in Sources */,
 				4D59F99B2C3AA54700CA853D /* MainView.swift in Sources */,
 				4D78C22A2C36E025009AAF5E /* Workout.swift in Sources */,
 			);
