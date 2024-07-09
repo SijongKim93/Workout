@@ -13,16 +13,16 @@ struct TimerView: View {
     var body: some View {
         NavigationView {
             VStack {
-                if let settings = viewModel.timerSettings {
+                if viewModel.timerSettings != nil {
                     Text(viewModel.formatTime())
-                        .font(.system(size: 72, weight: .bold, design: .rounded))
+                        .font(.system(size: 75, weight: .bold, design: .rounded))
                         .padding()
                     
                     Button(action: viewModel.isTimerRunning ? viewModel.stopTimer : viewModel.startTimer) {
                         Text(viewModel.isTimerRunning ? "Stop Timer" : "Start Timer")
                             .font(.title)
                             .padding()
-                            .background(viewModel.isTimerRunning ? Color.red : Color.blue)
+                            .background(viewModel.isTimerRunning ? Color.red : Color.indigo)
                             .foregroundColor(.white)
                             .cornerRadius(10)
                     }
@@ -36,7 +36,7 @@ struct TimerView: View {
                         Text("타이머 설정")
                             .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                             .padding()
-                            .background(Color.blue)
+                            .background(Color.indigo)
                             .foregroundColor(.white)
                             .cornerRadius(10)
                     }
@@ -46,6 +46,11 @@ struct TimerView: View {
             .navigationBarItems(trailing: settingsButton)
             .sheet(isPresented: $viewModel.showSettings) {
                 TimerSettingsView(viewModel: viewModel)
+            }
+            .onAppear {
+                if let timerSettings = viewModel.timerSettings {
+                    viewModel.timeRemaining = timerSettings.minutes * 60 + timerSettings.seconds
+                }
             }
         }
     }

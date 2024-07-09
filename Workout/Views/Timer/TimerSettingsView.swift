@@ -27,7 +27,7 @@ struct TimerSettingsView: View {
                     }
                 }
                 .pickerStyle(WheelPickerStyle())
-                .frame(width: 100)
+                .frame(width: 150)
                 .clipped()
                 
                 Picker("Seconds", selection: $seconds) {
@@ -36,24 +36,31 @@ struct TimerSettingsView: View {
                     }
                 }
                 .pickerStyle(WheelPickerStyle())
-                .frame(width: 100)
+                .frame(width: 150)
                 .clipped()
             }
             .padding()
             
             Button(action: {
                 viewModel.timerSettings = TimerSettings(minutes: minutes, seconds: seconds)
+                viewModel.timeRemaining = minutes * 60 + seconds
                 viewModel.showSettings = false
             }) {
                 Text("설정 저장")
                     .font(.title)
                     .padding()
-                    .background(Color.blue)
+                    .background(Color.indigo)
                     .foregroundColor(.white)
                     .cornerRadius(10)
             }
         }
         .padding()
+        .onAppear {
+            if let settings = viewModel.timerSettings {
+                minutes = settings.minutes
+                seconds = settings.seconds
+            }
+        }
     }
 }
 
