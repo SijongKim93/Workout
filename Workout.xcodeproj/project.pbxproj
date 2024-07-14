@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D31DF9C2C43CB00009150C8 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D31DF9B2C43CB00009150C8 /* CalendarView.swift */; };
 		4D59F99B2C3AA54700CA853D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D59F99A2C3AA54700CA853D /* MainView.swift */; };
 		4D59F99D2C3AA57B00CA853D /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D59F99C2C3AA57B00CA853D /* TimerView.swift */; };
 		4D59F99F2C3AA58500CA853D /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D59F99E2C3AA58500CA853D /* MyPageView.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D31DF9B2C43CB00009150C8 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		4D59F99A2C3AA54700CA853D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		4D59F99C2C3AA57B00CA853D /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		4D59F99E2C3AA58500CA853D /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				4D59F99C2C3AA57B00CA853D /* TimerView.swift */,
+				4D31DF9B2C43CB00009150C8 /* CalendarView.swift */,
 				4D59F9A42C3ACF5200CA853D /* TimerSettingsView.swift */,
 			);
 			path = Timer;
@@ -246,6 +249,7 @@
 				4D59F99D2C3AA57B00CA853D /* TimerView.swift in Sources */,
 				4D78C22C2C36E121009AAF5E /* WorkoutViewModel.swift in Sources */,
 				4D78C21E2C36E000009AAF5E /* WorkoutsView.swift in Sources */,
+				4D31DF9C2C43CB00009150C8 /* CalendarView.swift in Sources */,
 				4D78C21C2C36E000009AAF5E /* WorkoutApp.swift in Sources */,
 				4D59F9A52C3ACF5200CA853D /* TimerSettingsView.swift in Sources */,
 				4D59F99B2C3AA54700CA853D /* MainView.swift in Sources */,
