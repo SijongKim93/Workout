@@ -19,53 +19,67 @@ struct CalendarView: View {
     }()
     
     var body: some View {
-        VStack {
-            HStack {
-                Button(action: {
-                    currentMonth = calendar.date(byAdding: .month, value: -1, to: currentMonth) ?? currentMonth
-                }) {
-                    Image(systemName: "chevron.left")
-                        .padding()
-                }
-                
-                Spacer()
-                
-                Text(dateFormatter.string(from: currentMonth))
-                    .font(.title)
-                    .bold()
-                    .padding()
-                
-                Spacer()
-                
-                Button(action: {
-                    currentMonth = calendar.date(byAdding: .month, value: 1, to: currentMonth) ?? currentMonth
-                }) {
-                    Image(systemName: "chevron.right")
-                        .padding()
-                }
-            }
-            
-            let daysInMonth = generateDaysInMonth(for: currentMonth)
-            let rows = daysInMonth.chunked(into: 7)
-            
-            ForEach(rows, id: \.self) { row in
+        GeometryReader { geometry in
+            VStack {
                 HStack {
-                    ForEach(row, id: \.self) { date in
-                        Text(date == nil ? "" : String(calendar.component(.day, from: date!)))
-                            .frame(maxWidth: .infinity, maxHeight: .infinity)
-                            .background(date == selectedDate ? Color.indigo : Color.clear)
-                            .cornerRadius(8)
-                            .onTapGesture {
-                                if let date = date {
-                                    selectedDate = date
-                                }
-                            }
-                        
+                    Button(action: {
+                        currentMonth = calendar.date(byAdding: .month, value: -1, to: currentMonth) ?? currentMonth
+                    }) {
+                        Image(systemName: "chevron.left")
+                            .padding()
+                    }
+                    
+                    Spacer()
+                    
+                    Text(dateFormatter.string(from: currentMonth))
+                        .font(.title)
+                        .bold()
+                        .padding()
+                    
+                    Spacer()
+                    
+                    Button(action: {
+                        currentMonth = calendar.date(byAdding: .month, value: 1, to: currentMonth) ?? currentMonth
+                    }) {
+                        Image(systemName: "chevron.right")
+                            .padding()
                     }
                 }
+                
+                let daysInMonth = generateDaysInMonth(for: currentMonth)
+                let rows = daysInMonth.chunked(into: 7)
+                
+                VStack(spacing: 4) {
+                    ForEach(rows, id: \.self) { row in
+                        HStack(spacing: 4) {
+                            ForEach(row, id: \.self) { date in
+                                ZStack {
+                                    if let date = date {
+                                        Circle()
+                                            .fill(date == selectedDate ? Color.indigo : Color.clear)
+                                            .frame(width: 40, height: 40)
+                                        Text(String(calendar.component(.day, from: date)))
+                                            .foregroundColor(date == selectedDate ? .white : .primary)
+                                    } else {
+                                        Text("")
+                                            .frame(width: 40, height: 40)
+                                    }
+                                }
+                                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                                .onTapGesture {
+                                    if let date = date {
+                                        selectedDate = date
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .frame(height: geometry.size.height * 1 / 2)
+                
+                Spacer()
             }
-            
-            Spacer()
+            .padding()
         }
     }
     
