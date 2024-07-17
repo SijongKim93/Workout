@@ -10,6 +10,7 @@
 		4D31DF9C2C43CB00009150C8 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D31DF9B2C43CB00009150C8 /* CalendarView.swift */; };
 		4D31DF9F2C454AB2009150C8 /* WorkoutInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D31DF9E2C454AB2009150C8 /* WorkoutInputView.swift */; };
 		4D31DFA12C454B61009150C8 /* WorkoutType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D31DFA02C454B61009150C8 /* WorkoutType.swift */; };
+		4D31DFA32C47A09D009150C8 /* MyGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D31DFA22C47A09D009150C8 /* MyGridView.swift */; };
 		4D59F99B2C3AA54700CA853D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D59F99A2C3AA54700CA853D /* MainView.swift */; };
 		4D59F99D2C3AA57B00CA853D /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D59F99C2C3AA57B00CA853D /* TimerView.swift */; };
 		4D59F99F2C3AA58500CA853D /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D59F99E2C3AA58500CA853D /* MyPageView.swift */; };
@@ -34,6 +35,7 @@
 		4D31DF9B2C43CB00009150C8 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		4D31DF9E2C454AB2009150C8 /* WorkoutInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutInputView.swift; sourceTree = "<group>"; };
 		4D31DFA02C454B61009150C8 /* WorkoutType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutType.swift; sourceTree = "<group>"; };
+		4D31DFA22C47A09D009150C8 /* MyGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGridView.swift; sourceTree = "<group>"; };
 		4D59F99A2C3AA54700CA853D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		4D59F99C2C3AA57B00CA853D /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		4D59F99E2C3AA58500CA853D /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				4D31DF9B2C43CB00009150C8 /* CalendarView.swift */,
+				4D31DFA22C47A09D009150C8 /* MyGridView.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				4D78C21E2C36E000009AAF5E /* WorkoutsView.swift in Sources */,
 				4D31DF9C2C43CB00009150C8 /* CalendarView.swift in Sources */,
 				4D78C21C2C36E000009AAF5E /* WorkoutApp.swift in Sources */,
+				4D31DFA32C47A09D009150C8 /* MyGridView.swift in Sources */,
 				4D59F9A52C3ACF5200CA853D /* TimerSettingsView.swift in Sources */,
 				4D59F99B2C3AA54700CA853D /* MainView.swift in Sources */,
 				4D78C22A2C36E025009AAF5E /* Workout.swift in Sources */,
